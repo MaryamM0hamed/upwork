@@ -18,7 +18,7 @@ return new class extends Migration
             $table->foreignId("user_id");
             $table->foreignId("job_id");
             $table->integer('quality');
-            $table->integer('quality');
+            $table->integer('skill');
             $table->integer('communication');
             $table->integer('availability');
             $table->integer('deadline');

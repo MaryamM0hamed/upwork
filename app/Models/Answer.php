@@ -9,4 +9,7 @@ class Answer extends Model
 {
     use HasFactory;
     protected $guarded = [];
+    function questions(){
+        return $this->belongsTo(Question::class)->withDefault();
+    }
 }

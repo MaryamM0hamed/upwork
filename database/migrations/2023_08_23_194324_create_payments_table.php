@@ -21,7 +21,7 @@ return new class extends Migration
             $table->double('final_price',10,2);
             $table->string('transaction_id');
             // $table->string("currency");
-            $table->enum('payment_method',['Paypal','Stripe','Hyperpay'])->default('Paypal');
+            $table->enum('payment_method',['Paypal','Stripe','Hyperpay'])->default('Hyperpay');
             $table->timestamps();
         });
     }

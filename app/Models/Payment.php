@@ -9,4 +9,9 @@ class Payment extends Model
 {
     use HasFactory;
     protected $guarded = [];
+
+    function jobs(){
+        return $this->belongsTo(Job::class)->withDefault();
+    }
+
 }

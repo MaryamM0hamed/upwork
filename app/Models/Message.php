@@ -9,4 +9,14 @@ class Message extends Model
 {
     use HasFactory;
     protected $guarded = [];
+
+    function sender() {
+        return $this->belongsTo(User::class , 'sender_id')->withDefault();
+
+    }
+
+    function receiver() {
+        return $this->belongsTo(User::class , 'receiver_id')->withDefault();
+
+    }
 }
